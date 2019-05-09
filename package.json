@@ -1,0 +1,48 @@
+{
+    "name": "bezierleg",
+    "version": "0.0.1",
+    "description": "Split bezier curves into multiple parts",
+    "main": "dist/index.js",
+    "types": "lib/index.d.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc",
+        "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+        "lint": "tslint -p tsconfig.json",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm run lint",
+        "preversion": "npm run lint",
+        "version": "npm run format && git -A src",
+        "postversion": "git push && git push --tags"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/marvinderksen/bezierleg.git"
+    },
+    "keywords": [
+        "bezier",
+        "js",
+        "ts",
+        "animation",
+        "css"
+    ],
+    "author": "Marvin Derksen",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/marvinderksen/bezierleg/issues"
+    },
+    "homepage": "https://github.com/marvinderksen/bezierleg#readme",
+    "devDependencies": {
+        "prettier": "^1.17.0",
+        "tslint": "^5.16.0",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^3.4.5"
+    },
+    "dependencies": {
+        "@types/bezier-js": "0.0.8",
+        "bezier-js": "^2.4.0"
+    },
+    "files": [
+        "dist/**/*"
+    ]
+}
